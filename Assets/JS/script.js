@@ -12,7 +12,7 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-// Establishing global arrays/variables/etc so we can access them within our function 
+// Establishing global arrays/variables/etc so we can access them within our function
 // First object is our user responses default state
 var userPreferences = {
   passLength: 0,
@@ -104,7 +104,7 @@ function generatePassword() {
 
   // Runs our above defined takePreferences function to collect user input for the current use
   takePreferences();
-// Creating a locally scoped array filled with our previously defined random number generator functions, each only getting added if a user has selected the corresponding character type
+  // Creating a locally scoped array filled with our previously defined random number generator functions, each only getting added if a user has selected the corresponding character type
   var usableGenerators = [];
 
   if (userPreferences.numbers === true) {
@@ -138,6 +138,6 @@ function generatePassword() {
     var char = String.fromCharCode(passArray[i]);
     passString += char;
   }
-// return is our final result! String of custom length with custom characters, each randomly generated per user preferences. User can simply click "Generate Password" a second time to reset userPreference and begin anew.
+  // return is our final result! String of custom length with custom characters, each randomly generated per user preferences. User can simply click "Generate Password" a second time to reset userPreference and begin anew.
   return passString;
 }
